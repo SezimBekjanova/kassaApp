@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kassaapp.controllers.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="справочники">
+            <items>
+              <MenuItem fx:id="mnItemCategories" mnemonicParsing="false" onAction="#onMenuItemClicked" text="категории товаров " />
+                  <MenuItem fx:id="mnItemProducts" mnemonicParsing="false" onAction="#onMenuItemClicked" text="товары" />
+                  <MenuItem fx:id="mnItemDiscounts" mnemonicParsing="false" onAction="#onMenuItemClicked" text="скидки" />
+                  <MenuItem fx:id="mnItemsUsers" mnemonicParsing="false" onAction="#onMenuItemClicked" text="пользователи" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <SplitPane dividerPositions="0.6956521739130435" prefHeight="375.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tbOperations" layoutX="-1.0" prefHeight="419.0" prefWidth="427.0">
+                    <columns>
+                      <TableColumn fx:id="colmProduct" prefWidth="109.0" text="Товар " />
+                      <TableColumn fx:id="colmAmount" prefWidth="79.0" text="Количество " />
+                        <TableColumn fx:id="colmDiscount" prefWidth="62.0" text="Скидка " />
+                        <TableColumn fx:id="colmUnit" prefWidth="50.0" text="ед." />
+                        <TableColumn fx:id="columPrice" prefWidth="66.0" text="Цена" />
+                        <TableColumn fx:id="columTotal" minWidth="0.0" prefWidth="60.0" text="Сумма " />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="txtTotal" disable="true" layoutX="16.0" layoutY="107.0" />
+                  <TextField fx:id="txtBarcode" layoutX="20.0" layoutY="22.0" />
+                  <Button defaultButton="true" layoutX="112.0" layoutY="63.0" mnemonicParsing="false" onAction="#onClickedEnter" text="далее" />
+                  <TextField fx:id="txtSum" layoutX="16.0" layoutY="147.0" promptText="введите сумму денег" />
+                  <TextField fx:id="txtResult" editable="false" layoutX="16.0" layoutY="241.0" promptText="результат " />
+                  <Button layoutX="96.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickedCancel" prefHeight="30.0" prefWidth="70.0" text="удалить" />
+                  <Button layoutX="1.0" layoutY="357.0" mnemonicParsing="false" onAction="#onClickedClear" prefHeight="30.0" prefWidth="183.0" text="завершить " />
+                  <Button layoutX="16.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickedResult" prefHeight="30.0" prefWidth="70.0" text="ответ" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </left>
+</BorderPane>

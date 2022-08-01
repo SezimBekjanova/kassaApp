@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="442.0" prefWidth="359.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kassaapp.controllers.ChequeController">
+   <children>
+      <TableView fx:id="tbListPurchase" layoutX="-6.0" prefHeight="317.0" prefWidth="365.0">
+        <columns>
+          <TableColumn prefWidth="364.0" text="покупка" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtTotal" layoutX="52.0" layoutY="320.0" prefHeight="25.0" prefWidth="105.0" />
+      <TextField fx:id="txtSum" layoutX="52.0" layoutY="358.0" prefHeight="25.0" prefWidth="105.0" />
+      <Label layoutX="14.0" layoutY="324.0" prefHeight="17.0" prefWidth="43.0" text="итог" />
+      <Label layoutX="13.0" layoutY="362.0" text="сумма" />
+      <Label layoutX="15.0" layoutY="396.0" text="сдачи" />
+      <TextField fx:id="txtChange" layoutX="52.0" layoutY="392.0" prefHeight="17.0" prefWidth="105.0" />
+   </children>
+</AnchorPane>

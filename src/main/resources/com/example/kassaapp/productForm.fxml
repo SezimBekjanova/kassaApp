@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kassaapp.controllers.ProductController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Правка ">
+            <items>
+              <MenuItem fx:id="mnAdd" mnemonicParsing="false" onAction="#onClickedMenuItem" text="добавить " />
+                  <MenuItem fx:id="mnEdit" mnemonicParsing="false" onAction="#onClickedMenuItem" text="изменить" />
+                  <MenuItem fx:id="mnDelete" mnemonicParsing="false" onAction="#onClickedMenuItem" text="удалить" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="tbProduct" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colmName" prefWidth="142.0" text="Название" />
+          <TableColumn fx:id="colmPrice" prefWidth="74.0" text="Цена" />
+            <TableColumn fx:id="colmBarcode" prefWidth="79.0" text="Штрих-код" />
+            <TableColumn fx:id="colmAmount" prefWidth="83.0" text="Количество" />
+            <TableColumn fx:id="colmDiscount" prefWidth="81.0" text="Скидки" />
+            <TableColumn fx:id="colmCategory" prefWidth="149.0" text="Категория" />
+            <TableColumn fx:id="colmUnit" prefWidth="87.0" text="Ед. измер." />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

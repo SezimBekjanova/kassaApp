@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kassaapp.controllers.UserController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Действия ">
+            <items>
+              <MenuItem fx:id="mnAdd" mnemonicParsing="false" onAction="#onClickedMenu" text="Добавить" />
+                  <MenuItem fx:id="mnEdit" mnemonicParsing="false" onAction="#onClickedMenu" text="Изменить" />
+                  <MenuItem fx:id="mnDelete" mnemonicParsing="false" onAction="#onClickedMenu" text="удалить" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="tbUser" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colmLogin" prefWidth="166.0" sortType="DESCENDING" text="Пользователь" />
+            <TableColumn fx:id="colmName" prefWidth="170.0" sortType="DESCENDING" text="Имя " />
+            <TableColumn fx:id="colmPosition" prefWidth="162.0" sortType="DESCENDING" text="позиция" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
